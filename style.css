@@ -20,3 +20,15 @@ body {
 	display: flex;
 	flex: auto;
 }
+
+button {
+	align-self: flex-start;
+	border: 5px solid white;
+	border-radius: 12px;
+	width: 500px;
+	height: 50px;
+	font-size: 24px;
+	font-weight: bold;
+	background: black;
+	color: white;
+}

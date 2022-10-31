@@ -20,10 +20,28 @@ function hoverEffects(e) {
 	}, 5000);	
 
 }
+
+function modGridNumber(e) {
+	const container = document.querySelector("body");
+	let grid_number = Number(prompt("Enter Integer Value 1 - 100:", 16));
+	if (isNaN(grid_number)) {
+		grid_number = 16;
+	} else if (grid_number > 100) {
+		grid_number = 100;
+	}
+	while (container.lastChild.className === "row") {
+		container.removeChild(container.lastChild);
+	}
+	makeGrids(container, grid_number);
+}
+	
+	
 function main() {
 	const container = document.querySelector("body");
-	let grid_number = 120;
+	let grid_number = 16;
 	makeGrids(container, grid_number);
+	const button = document.querySelector("button");
+	button.addEventListener("click", modGridNumber);
 }
 
 main();
