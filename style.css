@@ -5,8 +5,14 @@ body {
 }
 
 .grid {
-	border: 5px solid;
-	background: grey;
+	border: 1px solid;
+	background: black;
+	flex: auto;
+}
+
+.selected {
+	border: 1px solid white;
+	background: red;
 	flex: auto;
 }
 

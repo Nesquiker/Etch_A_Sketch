@@ -7,14 +7,22 @@ function makeGrids(container, number) {
 			const grid = document.createElement("div");
 			grid.classList.add("grid");
 			row.appendChild(grid);
+			grid.addEventListener("mouseover", hoverEffects);
 		}
 		container.appendChild(row);
 	}
 }	
 
+function hoverEffects(e) {
+	e.target.classList.add("selected");
+  	setTimeout(() => {
+	e.target.classList.remove("selected");
+	}, 5000);	
+
+}
 function main() {
 	const container = document.querySelector("body");
-	let grid_number = 16;
+	let grid_number = 120;
 	makeGrids(container, grid_number);
 }
 
